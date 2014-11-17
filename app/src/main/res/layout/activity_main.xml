@@ -1,0 +1,43 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    style="@style/Match"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDrawer"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/background_user_navigation_drawer"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/contDrawerHeader"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/drawerHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/headerback"/>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/navigationDrawerListViewWrapper"
+            layout="@layout/navigation_drawer_list_view"/>
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
+
